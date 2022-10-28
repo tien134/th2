@@ -1,0 +1,292 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tuy Hoà 2 - Chinh Phục Vinh Quang</title>
+  
+
+</head>
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      border-top: 20px solid #04AA6D;
+      background: #dedede;
+      align-items: center;
+      justify-items: center;
+      font-size: auto;
+      font-family: "Arial";
+      color: #003D14;
+      text-align: center;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label {
+      text-align: left;
+      color: #003D14;
+      padding: 5px 0 5px 0;
+      display: inline-block;
+    }
+em {
+    color: #f45702;
+    font-weight: bold;
+}
+
+  input[type=submit] {
+  background-color: #04AA6D;
+  color: #FFF;
+  padding: 12px 20px;
+  margin-right: 12px;
+  width: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #04CC6D;
+}
+
+input[type=reset] {
+  background-color: #04AA6D;
+  color: #FFF;
+  padding: 12px 20px;
+  width: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+    input[type=reset]:hover {
+  background-color: #04CC6D;
+}
+    input[type=button] {
+      background-color: #04AA6D;
+      color: #FFF;
+      padding: 6px 20px;
+      margin: 10px 10px 10px 0;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: center;
+    }
+
+    input[type=button]:hover {
+      background-color: #04CC6D;
+    }
+
+    .container {
+      border-top: 5px solid #04AA6D;
+      font-size: auto;
+      font-weight: 600;
+      font-color: #003D14;
+      text-align: justify;
+      border: 2px ridge #4056a1=;
+      border-radius: 4px;
+      background: #fff;
+      padding: 0 30px 30px 30px;
+    }
+
+    .col-25 {
+      float: center;
+      width: 100%;
+    }
+
+    .col-75 {
+      float: left;
+      width: 100%;
+    }
+
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+
+      .col-25 {
+        width: 100%;
+        margin-top: 0;
+        
+      }
+      .col-75 {
+        width: 100%;
+        margin-top: 0;
+        
+      }
+      input[type=submit] {
+        width: auto;
+        margin-top: 0;
+        
+      }
+      input[type=reset] {
+        width: auto;
+        margin-top: 0;
+        
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>MCP TUY HOÀ 2</h2>
+ 
+  <div class="container">
+     <!--Cách 1: HIỂN THỊ THÔNG BÁO DẠNG POUPUP -->
+        <script type="text/javascript">
+            var submitted = false;
+        </script>
+        <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){alert('Bạn đã gửi thông tin thành công tới hệ thống!');}" style="display: none;"></iframe>
+        <!--Cách 2: HIỂN THỊ THÔNG BÁO DẠNG LINK-->
+
+        <div class=" wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+            <script type="text/javascript">
+                var submitted = false;
+            </script>
+            <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){window.location='thongbao.html';}" style="display: none;"></iframe>
+            <!--Cách 2: End HIỂN THỊ THÔNG BÁO DẠNG LINK-->
+            <form onsubmit="submitted=true;" target="hidden_iframe" class="text-left" role="form" id="ss-form" method="GET" action="https://script.google.com/macros/s/AKfycbzTB3Fq2CmPU9n-SXS_na2U2sdU-mhvA94Sb7K0C2GdvGBfC78Q_8msLTMbdGtd_PTHFQ/exec">
+  <p></p>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="DSR">DSR<em>&#x2a;</em></label>
+        </div>
+        <div class="col-75">
+          <select id="DSR" name="DSR" required="">
+            <option value="">Nhấp chọn</option>
+            <option value="VS011 - Công Định"> VS011 - Công Định </option>
+            <option value="VS012 - Minh Trọng"> VS012 - Minh Trọng </option>
+            <option value="VS013 - Phạm Định"> VS013 - Phạm Định </option>
+            <option value="VS014 - Thu Hằng"> VS014 - Thu Hằng </option>
+            <option value="VS015 - Đức Tiên"> VS015 - Đức Tiên </option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Mã khách hàng</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="ma_kh" name="ma_kh" required="" pattern="(?=.*\d)(?=.*[A-Z]).{6,}" title="Mã khách hàng phải có ký tự đầu viết hoa và đủ 6 ký tự" placeholder="Nhập mã khách hàng đủ 6 ký tự" autocomplete="off">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Toạ độ</label>
+          </div>
+          <div class="col-75">
+             <script type="text/javascript">
+              function getLocationConstant() {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+                } else {
+                  alert("Your browser or device doesn't support Geolocation");
+                }
+              }
+              // Cập nhật vị trí thành công
+              function onGeoSuccess(event) {
+                document.getElementById("Toado").value = event.coords.latitude + ", " + event.coords.longitude;
+              }
+              // Nếu xảy ra lỗi
+              function onGeoError(event) {
+                alert("Error code " + event.code + ". " + event.message);
+              }
+            </script>
+
+            <cfform action="gps2.cfm" method="post">
+              <input type="text" id="Toado" name="Toado" value=""> <input type="button" value="Lấy định vị" onclick="getLocationConstant()" />
+
+          </div>
+<script type= "text/javascript">
+var quan_huyen_arr = new Array("Thành phố Tuy Hoà", "Thị xã Đông Hòa", "Thị xã Sông Cầu", "Huyện Đồng Xuân", "Huyện Tuy An", "Huyện Sơn Hoà", "Huyện Sông Hinh", "Huyện Tây Hoà", "Huyện Phú Hoà");
+var s_a = new Array();
+s_a[0]="";
+s_a[1]="Phường 1|Phường 2|Phường 3|Phường 4|Phường 5|Phường 6|Phường 7|Phường 8|Phường 9|Phường Phú Đông|Phường Phú Lâm|Phường Phú Thạnh|Xã An Phú|Xã Bình Kiến|Xã Bình Ngọc|Xã Hòa Kiến";
+s_a[2]="Phường Hòa Hiệp Bắc|Phường Hòa Hiệp Nam|Phường Hoà Hiệp Trung|Phường Hoà Vinh|Phường Hòa Xuân Tây|Xã Hòa Tâm|Xã Hòa Tân Đông|Xã Hòa Thành|Xã Hòa Xuân Đông|Xã Hòa Xuân Nam";
+s_a[3]="Phường Xuân Đài|Phường Xuân Phú|Phường Xuân Thành|Phường Xuân Yên|Xã Xuân Bình|Xã Xuân Cảnh|Xã Xuân Hải|Xã Xuân Lâm|Xã Xuân Lộc|Xã Xuân Phương|Xã Xuân Thịnh|Xã Xuân Thọ 1|Xã Xuân Thọ 2";
+s_a[4]="Thị trấn La Hai|Xã Đa Lộc|Xã Phú Mỡ|Xã Xuân Lãnh|Xã Xuân Long|Xã Xuân Phước|Xã Xuân Quang 1|Xã Xuân Quang 2|Xã Xuân Quang 3|Xã Xuân Sơn Bắc|Xã Xuân Sơn Nam";
+s_a[5]="Thị trấn Chí Thạnh|Xã An Dân|Xã An Ninh Tây|Xã An Ninh Đông|Xã An Thạch|Xã An Hòa Hải|Xã An Định|Xã An Cư|Xã An Lĩnh|Xã An Nghiệp|Xã An Xuân|Xã An Hiệp|Xã An Mỹ|Xã An Thọ|Xã An Chấn";
+s_a[6]="Thị trấn Củng Sơn|Xã Cà Lúi|Xã Eachà Rang|Xã Krông Pa|Xã Phước Tân|Xã Sơn Định|Xã Sơn Hà|Xã Sơn Hội|Xã Sơn Long|Xã Sơn Nguyên|Xã Sơn Phước|Xã Sơn Xuân|Xã Suối Bạc|Xã Suối Trai";
+s_a[7]="Thị trấn Hai Riêng|Xã Đức Bình Đông|Xã Đức Bình Tây|Xã Ea Bá|Xã Ea Lâm|Xã EaBar|Xã EaBia|Xã Ealy|Xã EaTrol|Xã Sông Hinh|Xã Sơn Giang";
+s_a[8]="Thị trấn Phú Thứ|Xã Hòa Bình 1|Xã Hòa Đồng|Xã Hòa Mỹ Đông|Xã Hòa Mỹ Tây|Xã Hòa Phong|Xã Hòa Phú|Xã Hòa Tân Tây|Xã Hòa Thịnh|Xã Sơn Thành Đông|Xã Sơn Thành Tây";
+s_a[9]="Thị Trấn Phú Hoà|Xã Hòa An|Xã Hòa Định Đông|Xã Hòa Định Tây|Xã Hòa Hội|Xã Hòa Quang Bắc|Xã Hòa Quang Nam|Xã Hòa Thắng|Xã Hòa Trị";
+var s_b = new Array();
+s_b[1,1]="c11|c12|c13|c14|c15|c16|c17|c18|c19|c10";
+s_b[1,2]="c21|c22|c23|c24|c25|c26|c27|c28|c29|c210";
+s_b[2,1]="d11|d12|d13|d14|d15|d16|d17|d18|d19|d10";
+s_b[2,2]="d21|d22|d23|d24|d25|d26|d27|d28|d29|d210";
+function print_quan_huyen(quan_huyen_id){
+    // given the id of the <select> tag as function argument, it inserts <option> tags
+    var option_str = document.getElementById(quan_huyen_id);
+    option_str.length=0;
+    option_str.options[0] = new Option('Nhấp chọn Huyện','');
+    option_str.selectedIndex = 0;
+    for (var i=0; i<quan_huyen_arr.length; i++) {
+        option_str.options[option_str.length] = new Option(quan_huyen_arr[i],quan_huyen_arr[i]);
+    }
+}
+
+function print_xa_phuong(xa_phuong_id, xa_phuong_index){
+    var option_str = document.getElementById(xa_phuong_id);
+    option_str.length=0;
+    option_str.options[0] = new Option('Nhấp chọn Xã','');
+    option_str.selectedIndex = 0;
+    var xa_phuong_arr = s_a[xa_phuong_index].split("|");
+    for (var i=0; i<xa_phuong_arr.length; i++) {
+        option_str.options[option_str.length] = new Option(xa_phuong_arr[i],xa_phuong_arr[i]);
+    }
+}
+
+
+</script>
+</head>
+
+<body>
+<form>   
+  <div class="col-25">
+          <label for="quan_huyen">Huyện/Thị xã</label>
+  <div class="col-75">
+<select onchange="print_xa_phuong('xa_phuong',this.selectedIndex);" id="quan_huyen" name ="quan_huyen" required=""></select>
+  </div>
+  <div class="col-25">
+          <label for="quan_huyen">Xã/Phường</label>
+  <div class="col-75">
+        <select name ="xa_phuong" id ="xa_phuong" required=""></select>
+  </div>
+        <script language="javascript">print_quan_huyen("quan_huyen");</script>          <div class="row">
+          <div class="col-25">
+            <label for="fname">Địa chỉ:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="dia_chi" name="dia_chi" required="" placeholder="Nhập địa chỉ" autocomplete="off">
+            <p></p>
+          </div>
+          <div class="row">
+            <input type="submit" value="Gửi">
+            <input type="reset" value="Xoá">
+          </div>
+    </form>
+
+              
+</body>
+
+</html>
